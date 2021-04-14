@@ -8,8 +8,7 @@ a {
 
 /* Links já visitados */
 a:visited {
-    /* color: green; */
-    filter: brightness(50%); /* Cor 50% mais escura */
+    color: green;
 }
 
 /* Link enquanto o mouse está sobre ele */
