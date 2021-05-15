@@ -73,7 +73,7 @@ nav {
     /* os filhos ficarão em linha */
 }
 
-section {
+main, aside {
     background-color: var(--cor-texto-claro);
     padding: 24px;
     margin-bottom: 20px;
@@ -85,23 +85,23 @@ section {
     /* 1 unidade de largura */
 }
 
-#principal {
+main {
     width: 75%;
 }
 
-#secundario {
+aside {
     margin-left: 20px;
     background-color: var(--cor-fundo-escura);
     width: 25%;
 }
 
-section article { 
+main article, aside article { 
 /*article que estão dentro de uma section*/
     margin: 24px 0;
     /*24px top/bottom, 0 left/right */
 }
 
-section > h1 { /* > apenas os h1 que são filhos diretos de section */
+main > h1, aside > h1 { /* > apenas os h1 que são filhos diretos de main ou aside */
     /*Deixar o texto em maiúsculas */
     text-transform: uppercase;
     color: var(--cor-secundaria);
@@ -157,13 +157,37 @@ article > h2 {
     flex-direction: row; /* os filhos ficarão em linha */
 }
 
-#secundario > aside > img {
+aside > article > img {
     display: block;
     margin: 0 auto; /* margin auto à esquerda e à direita centraliza o elemento quando este é display: block */
+    border-radius: 4px; /* borda arredondada */
 }
 
-#secundario > aside > h1 > a {
+aside > article > h1 > a {
     font-size: 1rem;
     color: #000000;
+}
 
+aside > article > h1 {
+    margin-top: 6px;
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    padding: 24px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    /* dá espaço automaticamente entre os itens de um flexbox */
+    align-content: space-around;
+}
+
+footer a {
+    color: #FFFFFF;
+}
+
+footer ul li {
+    display: inline-block; /*coloca os itens de uma lista na horizontal */
+    padding: 0 12px;
+    border-right: 1px solid #FFFFFF;
 }
