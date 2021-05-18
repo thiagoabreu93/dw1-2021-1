@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
+        body {
+            font-family: 'work sans', Arial, Helvetica, sans-serif;
+            /* Medidas Absolutas: (recomenda px)
+            cm, mm, in (pol), px, pt, pc
+
+            Medidas Relativas (recomenda em)
+            em, ex, rem, vw, vh, % 
+            16px geralmente = 1em */
+            font-size: 1em;
+            /* lighter normal bold bolder */
+        }
+
+        h1 {
+            font: italic bolder 3em 'work sans', sans-serif;
+            /*font-family: 'work sans', sans-serif;
+            font-weight: bolder;
+            font-size: 1em;
+            font-style: italic;*/
+
+            /*shorthand font
+            * font-style -> font-weight -> font-size -> font-family */
+        }
+
+        h2 {
+            font: bold 2em 'work sans'
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com Fontes</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sunt nisi laudantium mollitia fuga facere temporibus, alias necessitatibus amet, illum quae eos vel dignissimos aut soluta maiores, assumenda sequi placeat?</p> 
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima consequatur ea exercitationem molestias vitae amet modi commodi asperiores unde ad debitis quidem optio, reiciendis facilis maiores nostrum obcaecati animi. Dolorem.</p>
+    <h2>Subtítulo do exercício</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis iure praesentium voluptatibus labore voluptates reprehenderit, totam, harum sint quo blanditiis rerum impedit dolore earum, aperiam minima neque asperiores quis maiores? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore voluptatibus repudiandae nam blanditiis expedita dolore sunt recusandae nulla dolores nemo doloremque veritatis, quasi ipsam placeat deserunt doloribus aperiam itaque iste?</p>
+</body>
+</html>
