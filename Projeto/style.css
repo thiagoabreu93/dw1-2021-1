@@ -1,0 +1,197 @@
+/* @import, quando existem, devem ser o primeiro item de um arquivo CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*Definição de variáveis */
+:root {
+    --cor-primaria: #038C25;
+    --cor-secundaria: #FF7F2A;
+    --cor-secundaria-clara: #FFAF7B;
+    --cor-fundo-clara: #DDDDDD;
+    --cor-fundo-escura: #BBBBBB;
+    --cor-texto-claro: #FFFFFF;
+    --cor-texto-escura: #777777;
+}
+
+/* CSS reset */
+* { /* todos os elementos */
+    padding: 0;
+    margin: 0;
+    
+    /*Google fonts */
+    /* font-family: Calibri, Arial, sans;
+    Exemplo de família de fonte sem serifa */
+    
+    /*Exemplo de família de fonte com serifa
+    font-family: Georgia, 'Times New Roman', serif; */
+
+    /*Exemplo de família de fonte MONOESPAÇADA
+    font-family: Consolas, 'Courier New', monospace; */
+
+    /*Família de fontes da web (webfonts) */
+    font-family: Raleway, Calibri, Arial, sans;
+    font-size:16px;
+}
+
+html { /*tamanho de fonte padrão do documento */
+    font-size: 16px;
+}
+
+/* cor de todos os links do site */
+a {
+    color: var(--cor-primaria);
+    text-decoration: none; /*sem sublinhado */
+}
+
+a:hover {
+    /*mouse passando em cima do link */
+    color: var(--cor-secundaria);
+    text-decoration: underline; /*volta o sublinhado */
+}
+header {
+    background-color: var(--cor-primaria);
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+nav {
+    background-color: var(--cor-secundaria); 
+    /*Cor do fundo */
+    color: var(--cor-texto-claro); /*Cor do texto */
+}
+
+#content {
+    background-color: var(--cor-fundo-clara);
+    padding: 20px;
+    /* este elemento e seus filhos usarão flexbox */
+    display: flex;
+    flex-direction: row;
+    /* os filhos ficarão em linha */
+}
+
+main, aside {
+    background-color: var(--cor-texto-claro);
+    padding: 24px;
+    margin-bottom: 20px;
+    /* bordas arredondadas */
+    border-radius: 10px;
+    /* sombra (drop-down shadow) */
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.25);
+    flex-grow: 1;
+    /* 1 unidade de largura */
+}
+
+main {
+    width: 75%;
+}
+
+aside {
+    margin-left: 20px;
+    background-color: var(--cor-fundo-escura);
+    width: 25%;
+}
+
+main article, aside article { 
+/*article que estão dentro de uma section*/
+    margin: 24px 0;
+    /*24px top/bottom, 0 left/right */
+}
+
+main > h1, aside > h1 { /* > apenas os h1 que são filhos diretos de main ou aside */
+    /*Deixar o texto em maiúsculas */
+    text-transform: uppercase;
+    color: var(--cor-secundaria);
+}
+
+article > h1 { /* > só os h1 que são filhos diretos de article */
+    font-size:1.5rem;
+    /*1.5x o tamanho da fonte do elemento raiz (html) */
+    margin-bottom: 6px;
+}
+
+article > h1 > a {
+    font-size: 1.5rem;
+}
+
+article > p {
+    color: var(--cor-texto-escura);
+}
+
+article > h2 {
+    font-size: 0.8rem;
+    text-transform: uppercase; /* Todas as letras em maiusculas */
+}
+
+.destaque {
+    background-color: var(--cor-secundaria-clara);
+    padding: 24px;
+    border-radius: 4px; /*bordas levemente arredondadas */
+}
+
+.destaque > p {
+    color: #000000;
+    font-size: 1.5rem;
+}
+
+.destaque > h1 > a {
+    font-size: 2.5rem;
+}
+
+.destaque > h2 {
+    font-size: 1rem;
+
+}
+
+.destaque img {
+    width: 450px;
+    margin-right: 24px;
+    border-radius: 4px;
+}
+
+.foto-texto {
+    display: flex;
+    flex-direction: row; /* os filhos ficarão em linha */
+}
+
+aside > article > img {
+    display: block;
+    margin: 0 auto; /* margin auto à esquerda e à direita centraliza o elemento quando este é display: block */
+    border-radius: 4px; /* borda arredondada */
+}
+
+aside > article > h1 > a {
+    font-size: 1rem;
+    color: #000000;
+}
+
+aside > article > h1 {
+    margin-top: 6px;
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    padding: 24px;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    /* dá espaço automaticamente entre os itens de um flexbox */
+    align-content: space-around;
+}
+
+footer a {
+    color: #FFFFFF;
+}
+
+footer ul li {
+    display: inline-block; /*coloca os itens de uma lista na horizontal */
+    padding: 0 12px;
+    border-right: 1px solid #FFFFFF;
+}
+
+footer adress {
+    text-align: right;
+}
