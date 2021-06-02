@@ -17,11 +17,9 @@
 * { /* todos os elementos */
     padding: 0;
     margin: 0;
-    
-    /*Google fonts */
-    /* font-family: Calibri, Arial, sans;
-    Exemplo de família de fonte sem serifa */
-    
+    /*Exemplo de família de fonte sem serifa 
+    font-family: Calibri, Arial, sans;*/
+
     /*Exemplo de família de fonte com serifa
     font-family: Georgia, 'Times New Roman', serif; */
 
@@ -30,7 +28,10 @@
 
     /*Família de fontes da web (webfonts) */
     font-family: Raleway, Calibri, Arial, sans;
-    font-size:16px;
+    font-size: 16px;
+
+    /* faz com que bordas e margens sejam considerados no tamanho total do elemento */
+    box-sizing: border-box;
 }
 
 html { /*tamanho de fonte padrão do documento */
@@ -124,13 +125,11 @@ nav {
 main, aside {
     background-color: var(--cor-texto-claro);
     padding: 24px;
-    margin-bottom: 20px;
-    /* bordas arredondadas */
-    border-radius: 10px;
-    /* sombra (drop-down shadow) */
+    margin-bottom: 20px; /* bordas arredondadas */
+    border-radius: 10px; /* sombra (drop-down shadow) */
     box-shadow: 3px 3px 10px rgba(0,0,0,0.25);
-    flex-grow: 1;
-    /* 1 unidade de largura */
+    flex-grow: 1; /* 1 unidade de largura */
+    max-width: 100%;
 }
 
 main {
@@ -191,18 +190,19 @@ article > h2 {
 
 .destaque > h2 {
     font-size: 1rem;
-
 }
 
 .destaque img {
     width: 450px;
     margin-right: 24px;
     border-radius: 4px;
+    /* largura máxima limitada a largura do pai */
+    max-width: 100%;
 }
 
 .foto-texto {
     display: flex;
-    flex-direction: row; /* os filhos ficarão em linha */
+    flex-direction: row; /* os filhos ficarão em linha na horizontal */
 }
 
 aside > article > img {
@@ -248,4 +248,59 @@ footer ul li:last-child {
 footer img {
     width: 200px;
     height: 100%;
+}
+
+/*Regras para larguras especificas de tela */
+@media screen and (max-width: 1020px) { /* Breakpoint (ponto de quebra) */
+    main {
+        width: 60%;
+    }
+    aside {
+        width: 40%;
+    }
+    .foto-texto {
+        display: flex;
+        flex-direction: column; /* os filhos ficarão em coluna, na vertical */
+    }    
+    .destaque img {
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #content {
+        flex-direction: column; /* os filhos ficarão em coluna, na vertical */
+    }
+    main {
+        width: 100%;
+    }
+    aside {
+        margin-left: 0;
+        width: 100%;
+    }
+    aside > article > h1 {
+        text-align: center;
+    }
+    .destaque img {
+        /* centralizar a imagem */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer {
+        flex-direction: column;
+    }
+    footer > * { /* todos os filhos diretos do footer */
+        margin-bottom: 12px;
+    }
+    footer ul li:first-child { /* só o primeiro (first-child) li */
+        padding-left: 0;
+    }
+    footer address {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    /*colocar o logo principal e os ícones de redes sociais em coluna */
 }
