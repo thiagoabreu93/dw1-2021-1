@@ -10,23 +10,48 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-<title>Vida Saudável - Comida Fitness</title>
+<title>Vida Saudável</title>
 </head>
 <body>
     <header> <!-- cabeçalho-->
-        <img id="Logo" src="img/1.png" alt="Vida Saudável" width="100%" title="Vida Saudável - Comida Fitness">
+        <a href="./">
+            <img id="Logo" src="img/1.png" alt="Vida Saudável">
+        </a>
+        <nav id="social">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/vidasaudavelfranca/" target="_blank">
+                    <img src="img/facebook-64x64.png" alt="Facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/maria.sirlene.3386?igshid=10almqp7n4ukf" target="_blank">
+                    <img src="img/instagram-64x64.png" alt="Instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://web.whatsapp.com/send?phone=5516992649276" target="_blank">
+                    <img src="img/whatsapp-64x64.png" alt="Whatsapp">
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </header>
     
-    <nav> <!-- menu-->
+    <nav id="menu"> <!-- Menu -->
+        <div id="menu-contraido">
+            <input type="checkbox">
+            <span></span>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="./">Home</a></li>
             <li><a href="restaurante.html">O Restaurante</a></li>
+            <li><a href="noticias.html">Notícias</a></li>
             <li><a href="cardapio.html">Cardápio</a></li>
-            <li><a href="noticias.html">Dicas & Notícias</a></li>
             <li><a href="contato.html">Contato</a></li>     
         </ul>
+        </div>
     </nav>
-    
+
     <div id="content">
         <!-- área de conteudo-->
         <main><!-- divisão principal do site -->
@@ -36,7 +61,7 @@
         <article class="destaque">
             <!--artigo principal-->
             <h2>Social</h2>
-            <h1><a href="#">Tião da Venda e Carla Manicure se casam após 15 anos de noivado</a></h1>
+            <h1><a href="noticia01.html">Tião da Venda e Carla Manicure se casam após 15 anos de noivado</a></h1>
             <div class="foto-texto"><img src="img/festa.png" alt="Foto dos Noivos" title="Foto: Aleksandr Neplokhov" >
             <p>Festa de casamento foi interrompida pelos fiscais da Vigilância Sanitária</p>
             </div>
@@ -65,8 +90,8 @@
     </main>
         <aside>
             <article>
-                <img src="img/relacionado01.png" alt="Foto de folhas" title="Foto: sohail">
-                <h1><a href="#">Mulher do verdureiro emagrece 30kg tomando chá e choca a quebrada; SAIBA MAIS</a>
+                <img src="img/ifood.jpg" alt="Ifood" title="Estamos no Ifood!">
+                <h1><a href="https://www.ifood.com.br/delivery/franca-sp/ki-delicia---marmitas-e-batatas-vila-aparecida/" target="_blank">Faça já seu pedido!</a>
                 </h1></article>
         <article>
             <img src="img/relacionado02.png" alt="Homem bem sucedido" title="Foto: Andrea Piacquadio">
@@ -78,6 +103,8 @@
 
     <footer>
         <!--rodapé-->
+        <a href="./">
+        <img src="img/1.png" alt="Vida Saudável"></a>
         <ul>
             <li><a href="#">Quem somos</a></li>
             <li><a href="#">Nossa missão</a></li>
@@ -86,10 +113,8 @@
         <address>
             Rua do Sobe e Desce, 33 <br>
             Morro Alto de Cima/SP<br>
-            <a href="tel:+55166661111">
-                (16) 6666-1111
-            </a><br>
-            <a href="mailto:contato@gol.com.br">contato@gol.com.br</a>
+            <a href="tel:+5516992649276">(16) 99264-9276</a><br>
+            <a href="mailto:vidasaudavel@gmail.com">vidasaudavel@gmail.com.br</a>
         </address>
     </footer>
 </body>
