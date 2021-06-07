@@ -1,8 +1,5 @@
-/* @import, quando existem, devem ser o primeiro item de um arquivo CSS */
-
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-/*Definição de variáveis */
 :root {
     --cor-primaria: #038C25;
     --cor-secundaria: #FF7F2A;
@@ -13,38 +10,26 @@
     --cor-texto-escura: #777777;
 }
 
-/* CSS reset */
-* { /* Todos os elementos */
+* {
     padding: 0;
     margin: 0;
-    /* Exemplo de família de fonte SEM serifa
-    font-family: Calibri, Arial, sans; */
-    
-     /* Exemplo de família de fonte COM serifa
-    font-family: Georgia, 'Times New Roman', serif; */
-    
-     /* Exemplo de família de fonte MONOESPAÇADA
-    font-family: Consolas, 'Courier New', monospace; */
-    
-     /* Família de fontes da web (webfonts) */
     font-family: Raleway, Calibri, Arial, sans;
     font-size: 16px;
-    /* Faz com que bordas e margens sejam considerados no tamanho total do elemento */
     box-sizing: border-box;
     }
-    html { /* Tamanho de fonte padrão do documento */
+
+    html {
     font-size: 16px;
     }
     
-    /* Configuração de todos os links do site */
     a {
     color: var(--cor-primaria);
-    text-decoration: none; /* Sem sublinhado */
+    text-decoration: none;
     }
     
-    a:hover { /* Mouse passando em cima do link */
+    a:hover { 
     color: var(--cor-secundaria);
-    text-decoration: underline; /* Volta o sublinhado */
+    text-decoration: underline; 
     }
     
     header {
@@ -55,8 +40,7 @@
     }
     
     #social {
-    background-color: transparent; /* Tira a cor de fundo */
-    display: flex;
+    background-color: transparent; 
     align-items: center;
     }
     
@@ -73,21 +57,21 @@
     
     #social a span {
     margin-left: 6px;
-    display: none; /* Esconder o texto dos links */
+    display: none; 
     }
     
     #social a:hover span {
-    display: inline; /* Mostra novamente o texto ao passar o mouse */
+    display: inline; 
     }
     
     nav ul li {
-    display: inline-block; /* Deixa o menu na horizontal */
+    display: inline-block; 
     margin: 10px;
     }
     
     nav {
-    background-color: var(--cor-secundaria); /* Cor do fundo */
-    color: var(--cor-texto-claro); /* Cor do texto */
+    background-color: var(--cor-secundaria); 
+    color: var(--cor-texto-claro); 
     }
     
     #menu {
@@ -107,7 +91,7 @@
     }
     
     #menu a:hover {
-    filter: brightness(0.8); /* Diminui o brilho em 20%, deixando mais escuro */
+    filter: brightness(0.8); 
     text-decoration: none;
     }
     
@@ -125,8 +109,8 @@
     }
     
     #menu-contraido input {
-    z-index: 100; /* Traz o input para cima */
-    opacity: 0; /* Esconde o input */
+    z-index: 100; 
+    opacity: 0; 
     display: none;
     }
     
@@ -138,33 +122,28 @@
     background-image: url('img/menu-icon-48x48.png');
     background-size: 40px 40px;
     background-position: center center;
-    cursor: pointer; /* Cursor de mãozinha */
+    cursor: pointer; 
     display: none;
     }
     
-    /* Seletor ~: seleciona o próximo elemento (irmão) */
     #menu-contraido input:checked ~ span {
-    /* Troca a imagem */
     background-image: url('img/close-icon-48x48.png');
     }
     
     #content {
     background-color: var(--cor-fundo-clara);
     padding: 20px;
-    /* Este elemento e seus filhos usarão flexbox */
     display: flex;
-    flex-direction: row; /* Os filhos ficarão em linha, na horizontal */
+    flex-direction: row; 
     }
     
     main, aside {
     background-color: var(--cor-texto-claro);
     padding: 24px;
     margin-bottom: 20px;
-    /* Bordas arrendondadas */
     border-radius: 10px;
-    /* Sombra (drop-down shadow) */
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.25);
-    flex-grow: 1; /* 1 unidade de largura (padrão) */
+    flex-grow: 1;
     max-width: 100%;
     }
     
@@ -178,22 +157,21 @@
     width: 25%;
     }
     
-    main article, aside article { /* article que estão de dentro de main ou aside */
-    margin: 24px 0; /* 24px top/bottom, 0 left/right */
+    main article, aside article { 
+    margin: 24px 0;
     }
     
-    main > h1, aside > h1 { /* Apenas os h1 que são filhos diretos de main ou aside */
-    /* Deixar o texto em maiúsculas */
+    main > h1, aside > h1 {
     text-transform: uppercase;
     color: var(--cor-secundaria);
     }
     
-    article > h1 { /* Só os h1 que são filhos diretos de article */
+    article > h1 { 
     margin-bottom: 6px;
     }
     
     article > h1 > a {
-    font-size: 1.5rem; /* 1.5x o tamanho da fonte do elemento raiz (html) */
+    font-size: 1.5rem; 
     }
     
     article > p {
@@ -202,13 +180,13 @@
     
     article > h2 {
     font-size: 0.8rem;
-    text-transform: uppercase; /* Todas as letras em maiúsculas */
+    text-transform: uppercase;
     }
     
     .destaque {
     background-color: var(--cor-secundaria-clara);
     padding: 24px;
-    border-radius: 4px; /* Bordas LEVEMENTE arredondadas */
+    border-radius: 4px; 
     }
     
     .destaque p {
@@ -228,13 +206,12 @@
     width: 450px;
     margin-right: 24px;
     border-radius: 4px;
-    /* Largura máxima limitada à largura do pai */
     max-width: 100%;
     }
     
     .foto-texto {
     display: flex;
-    flex-direction: row; /* Os filhos ficarão em linha, na horizontal */
+    flex-direction: row; 
     }
     
     .individual h1 {
@@ -247,12 +224,12 @@
         font-size: 1.1rem;
         margin-bottom: 6px;
     }
+    
     .individual .foto-texto {
         flex-direction: column;
     }
     
     .individual .foto-texto img {
-        /* centraliza a imagem horizontalmente */
         margin-left: auto;
         margin-right: auto;
     }
@@ -265,11 +242,8 @@
     
     aside > article > img {
     display: block;
-    /* margin auto à esquerda e à direita centraliza o elemento quando este é
-    display: block */
     margin: 0 auto;
-    border-radius: 4px; /* Borda arredondada */
-    /* Largura máxima é 100% da largura do pai */
+    border-radius: 4px;
     max-width: 100%;
     }
     
@@ -288,7 +262,6 @@
     color: #ffffff;
     display: flex;
     flex-direction: row;
-    /* Dá espaço automaticamente entre os itens de um flexbox */
     justify-content: space-around;
     }
     
@@ -297,12 +270,11 @@
     }
     
     footer ul li {
-    display: inline-block; /* Coloca os itens de uma lista na horizontal */
+    display: inline-block; 
     padding: 0 12px;
     border-right: 2px solid #ffffff;
     }
     
-    /* Tirar a borda direita do último li */
     footer ul li:last-child {
     border-right: none;
     }
@@ -312,17 +284,19 @@
     height: 100%;
     }
     
-    /* Regras para larguras específicas de tela */
-    @media screen and (max-width: 1020px) { /* Breakpoint (ponto de quebra) */
+    @media screen and (max-width: 1020px) { 
     main {
     width: 60%;
     }
+
     aside {
     width: 40%;
     }
+
     .foto-texto {
-    flex-direction: column; /* Os filhos ficarão em coluna, na vertical */
+    flex-direction: column; 
     }
+
     .destaque img {
     margin-right: 0;
     margin-bottom: 24px;
@@ -334,76 +308,89 @@
     min-height: 88px;
     padding: 0;
     }
+
     #menu ul {
     margin-top: 50px;
     }
-    #menu ul li { /* Menu vertical */
+
+    #menu ul li { 
     display: block;
     margin:6px 0;
     }
+
     #menu a {
         width: 100%;
         display: block;
     }
+
     #menu-contraido {
         margin-top: 24px;
         width: 100%;
     }
+
     #menu-contraido ul {
     display: none;
     }
-    /* Mostra o botão do menu */
+
     #menu-contraido input, #menu-contraido span {
     display: block;
     left:20px;
     }
+
     #menu-contraido input:checked ~ ul {
     display: block;
     }
     
      #content {
-    flex-direction: column; /* Os filhos ficarão em coluna, na vertical */
+    flex-direction: column; 
     }
+
     main {
     width: 100%;
     }
+
     aside {
     margin-left: 0;
     width: 100%;
     }
+
     aside > article > h1 {
     text-align: center;
     }
+
     .destaque img {
-    /* Centralizar a imagem */
     margin-left: auto;
     margin-right: auto;
     }
+
     footer {
     flex-direction: column;
     }
-    footer > * { /* Todos os filhos DIRETOS de footer */
+
+    footer > * { 
     margin-bottom: 12px;
     }
-    footer ul li:first-child { /* Só o primeiro (first-child) li */
+
+    footer ul li:first-child { 
     padding-left: 0;
     }
+
     footer address {
     text-align: right;
     }
     }
     
     @media screen and (max-width: 640px) {
-    /*
-    A FAZER: colocar o logo principal e os ícones de redes sociais em coluna
-    */
+
     header {
         flex-direction: column;
         align-items: center;
     }
+
     header img {
         max-width: 100%;
     }
+
     .destaque > h1> a {
         font-size: 2rem;
     }
