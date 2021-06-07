@@ -4,10 +4,10 @@
     --cor-primaria: #038C25;
     --cor-secundaria: #FF7F2A;
     --cor-secundaria-clara: #FFAF7B;
-    --cor-fundo-clara: #DDDDDD;
-    --cor-fundo-escura: #BBBBBB;
+    --cor-fundo-clara: #FDFDFD;
+    --cor-fundo-escura: #AAABBB;
     --cor-texto-claro: #FFFFFF;
-    --cor-texto-escura: #777777;
+    --cor-texto-escura: #6B6A6A;
 }
 
 * {
@@ -37,6 +37,10 @@
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
+    }
+
+    #logo {
+        display:auto;
     }
     
     #social {
@@ -224,7 +228,7 @@
         font-size: 1.1rem;
         margin-bottom: 6px;
     }
-    
+
     .individual .foto-texto {
         flex-direction: column;
     }
@@ -281,7 +285,7 @@
     
     footer img {
     width: 300px;
-    height: 100%;
+    height: auto;
     }
     
     @media screen and (max-width: 1020px) { 
