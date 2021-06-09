@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 :root {
-    --cor-primaria: #038C25;
+    --cor-primaria: #019A23;
     --cor-secundaria: #FF7F2A;
     --cor-secundaria-clara: #FFAF7B;
     --cor-fundo-clara: #FDFDFD;
@@ -34,16 +34,13 @@
     
     header {
     background-color: var(--cor-primaria);
-    padding: 10px 20px;
+    padding: 0 0px;
     display: flex;
     justify-content: space-between;
     }
 
     #logo {
         display:auto;
-       
-       
-
     }
     
     #social {
