@@ -41,6 +41,9 @@
 
     #logo {
         display:auto;
+       
+       
+
     }
     
     #social {
@@ -393,6 +396,8 @@
 
     header img {
         max-width: 100%;
+       
+        
     }
 
     .destaque > h1> a {
