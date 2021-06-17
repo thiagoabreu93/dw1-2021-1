@@ -1,0 +1,83 @@
+/*
+
+    Faça as modificações necessárias neste arquivo, de acordo com as instruções a seguir.
+
+    1) Faça com que o main e o aside fiquem lado a lado, o primeiro ocupando 75% da largura
+       horizontal e o segundo ocupando os outros 25%.
+
+    2) Crie um breakpoint na largura máxima de 720px. Abaixo desse ponto, o main e o aside
+       devem ficar empilhados, com ambos ocupando 100% da largura horizontal.
+
+    -> Veja na imagem "resultado.gif" o resultado pretendido.
+
+    3) Gere um ZIP com os arquivos da prova e faça o upload no Microsoft Teams até o
+       horário limite.
+
+*/
+
+* {
+    font-family: Calibri, Arial, sans;
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+header {
+    display: flex;
+}
+
+header, nav, main, aside, footer {
+    display: flex;
+    padding: 20px;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+}
+
+#content {
+    display: flex;
+}
+
+header {
+    background-color: plum;
+    border-color: purple;
+    color: purple;
+}
+
+nav {
+    background-color: lightgreen;
+    border-color: forestgreen;
+    color: forestgreen;
+}
+
+main {
+    background-color: lightblue;
+    border-color: midnightblue;
+    color: midnightblue;
+    width: 75%;
+}
+
+aside {
+    background-color: gainsboro;
+    border-color: gray;
+    color: gray;
+    width: 25%;
+}
+
+footer {
+    background-color: bisque;
+    border-color: sienna;
+    color: sienna;
+}
+
+@media screen and (max-width: 720px) { 
+    #content {
+        flex-direction: column;
+    }
+    main {
+        width: 100%;
+    }
+    aside {
+        width: 100%;
+    }
+}
